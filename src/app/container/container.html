@@ -1,2 +1,2 @@
-<app-search></app-search>
-<product-list></product-list>
+<app-search  (searchTextChange) = "setSerchTxt($event)"></app-search>
+<product-list [serchText] ="serchText"></product-list>

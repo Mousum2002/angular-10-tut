@@ -9,5 +9,10 @@ import { Search } from './search/search';
   styleUrl: './container.css',
 })
 export class Container {
+  serchText:string = '';
+  setSerchTxt(value:string){
+    this.serchText = value;
+  }
+  
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgStyle } from '@angular/common';
 import { Product } from './product/product';
@@ -543,6 +543,9 @@ export class ProductList {
   totalProduct = this.products.length;
   totalAvailableProduct = this.products.filter(a => a.is_in_inventory === true).length;
   totalNotAvailableProduct = this.products.filter(a => a.is_in_inventory === false).length;
+
+  @Input()
+  serchText:string = '';
   selectedRadioBut:string ='all'
   onFilterchange(value:string){
     this.selectedRadioBut = value;
