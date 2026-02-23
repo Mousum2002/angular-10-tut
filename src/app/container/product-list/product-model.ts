@@ -1,9 +1,9 @@
-export interface product{
+export interface product_model{
     id:number
     name:string
     description:string
     brand:string
-    gender: "MEN" | "WOMEN"
+    gender: string
     category: string
     size:number[]
     color:string[]

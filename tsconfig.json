@@ -3,11 +3,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgStyle } from '@angular/common';
+import { Product } from './product/product';
 
-import { product } from './product-model';
 
 
 
 @Component({
   selector: 'product-list',
-  imports: [CommonModule,NgStyle],
+  imports: [CommonModule,NgStyle,Product],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
