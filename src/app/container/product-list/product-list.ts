@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgStyle } from '@angular/common';
 import { Product } from './product/product';
-
+import { Filter } from './filter/filter';
 
 
 
 @Component({
   selector: 'product-list',
-  imports: [CommonModule,NgStyle,Product],
+  imports: [CommonModule,NgStyle,Product,Filter],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
@@ -539,7 +539,14 @@ export class ProductList {
       slug: "michael-feburary-sk8-hi"
     }
   ];
-//   addToCart:number=0;
+
+  totalProduct = this.products.length;
+  totalAvailableProduct = this.products.filter(a => a.is_in_inventory === true).length;
+  totalNotAvailableProduct = this.products.filter(a => a.is_in_inventory === false).length;
+  selectedRadioBut:string ='all'
+  onFilterchange(value:string){
+    this.selectedRadioBut = value;
+  }
 //   product:{
 //     pImage:string;
 //     name:string;

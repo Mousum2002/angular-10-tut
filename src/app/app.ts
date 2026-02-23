@@ -5,11 +5,12 @@ import { TopHeader } from './header/top-header/top-header';
 import {ProductList} from './container/product-list/product-list'
 import { CommonModule } from '@angular/common';
 import { Container } from './container/container';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent,TopHeader,ProductList,CommonModule,Container],
+  imports: [RouterOutlet, HeaderComponent,TopHeader,ProductList,CommonModule,Container,FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
