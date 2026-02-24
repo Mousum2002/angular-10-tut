@@ -1,4 +1,5 @@
-# Angular10Tut
+When cliking on the product the cancel button won't work. refrash the page to make the selected product '' again
+# Angular10PRACTICE
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
 
