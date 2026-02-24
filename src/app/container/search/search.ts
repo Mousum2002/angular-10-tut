@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
 @Component({
@@ -10,11 +10,13 @@ import { CommonModule } from '@angular/common';
 export class Search {
   searchText:string = '';
 
+  @ViewChild('searchInput',{static:false}) searchInputEl:ElementRef;
+
   @Output()
   searchTextChange:EventEmitter<string> = new EventEmitter<string>();
-  updateSearchText(inputln:HTMLInputElement){
-
-    this.searchText = inputln.value;
+  // inputln:HTMLInputElement
+  updateSearchText(){
+    this.searchText = this.searchInputEl.nativeElement.value;
     this.searchTextChange.emit(this.searchText);
 }
 

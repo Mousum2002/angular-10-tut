@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { product_model } from '../product-model';
+import { product_model } from '../../models/product-model';
 import { CommonModule } from '@angular/common';
 import { NgStyle } from '@angular/common';
 

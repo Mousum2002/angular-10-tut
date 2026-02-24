@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NgStyle } from '@angular/common';
 import { Product } from './product/product';
 import { Filter } from './filter/filter';
+import { product_model } from '../models/product-model';
+
 
 
 
@@ -13,7 +15,8 @@ import { Filter } from './filter/filter';
   styleUrl: './product-list.css',
 })
 export class ProductList {
-  products = [
+  selectedProduct:product_model;
+  products:product_model[] = [
     {
       id: 1,
       name: "Nike React Infinity Run Flyknit",
